@@ -1,17 +1,479 @@
-.btn {
-    display: inline-block;
-    padding: 35px 20px;
-    background-color: blue;
-    color: aliceblue;
-    text-transform: uppercase;
-    cursor: pointer;
-    border: 10px solid black;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    margin: 0 auto;
+/* Цвет основного текста #2E2F42 */
+
+/* Вторичный цвет текста,абзацев #434455; */
+
+/* Цвет заголовка героя #FFFFFF */
+
+/* Цвет кнопки #4D5AE5 , Цвет ховера #404BBF */
+
+/* Цвет акцента #E7E9FC */
+
+/* Цвет героя и футтера #2E2F42 */
+
+/* Цвет фона #E5E5E5 */
+
+/* Цвет фона вторичный #F4F4FD */
+
+
+
+/* Размеры основного текста : 16рх
+line-height: 1.5 множитель*/
+
+/* Размеры вторичных заголовков : 20рх
+line-height: 1.2 множитель */
+
+
+
+/* Переменные */
+
+html {
+    box-sizing: border-box;
 }
 
-.btn:hover {
-    background-color: blueviolet;
+*,
+*::before,
+*::after {
+    box-sizing: inherit ;
+    
 }
+
+:root {
+    --primary-text-color: #2E2F42;
+    --title-paragrav-color: #434455;
+    --acsent-color: #404BBF;
+    --button-color: #4D5AE5;
+    --button-portvolio-color: #F4F4FD;
+}
+
+/* Глобальные стили и сброс*/
+
+body {
+    color: #434455;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF;
+    letter-spacing: 0.02em;
+}
+
+.no-margin {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    padding-left: 0;
+}
+
+img {
+    display: block;
+}
+
+/* Общий контейнер */
+
+
+.container {
+    
+    width: 1152px;
+
+    padding-left: 12px;
+    padding-right: 12px;
+    
+
+    margin-left: 156px;
+    margin-right: 156px;
+    
+}
+
+
+
+/* Стиль к спискам и ссылкам общий */
+
+.link {
+    text-decoration: none;
+    
+}
+
+
+/* Общий флекс для шапки */
+
+.try {
+    display: flex;
+    align-items: center;
+    max-height: 72px;
+    
+    
+    
+}
+
+/* Логотип в шапке */
+
+.logo {
+    
+
+    color: var(--button-color);
+    font-size: 18px;
+    line-height: 1.17;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.03em;
+    font-weight: 800;
+    text-transform: uppercase;
+    
+
+}
+
+.logo-text {
+    color: var(--primary-text-color);
+
+
+}
+
+
+/* Навигация по сайту + контактная информация */
+
+.contact-list {
+    display: flex;
+    margin-left: 332px;
+}
+
+.contact-list .item {
+    margin-right: 40px;
+}
+
+
+
+.contact-list .contact-link {
+    color: var(--title-paragrav-color);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    font-style: normal;
+    
+}
+
+/* Флексы для нагивации по сайту */
+
+.nav .nav-links {
+    display: flex;
+    padding-left: 0;
+    margin-left: 70px;
+    
+}
+
+.nav-links .item {
+    
+    margin-right: 40px;
+}
+
+
+
+.nav-links .item:last-child {
+    margin-right: 0;
+}
+
+
+
+.nav-links .nav-link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    
+    color: var(--primary-text-color);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    font-style: normal;
+
+    
+}
+
+
+
+
+
+
+
+/* Навигация по сайту + контактная информация в ховере*/
+
+.nav-links .nav-link:hover,
+.nav-links .nav-link:focus,
+.addres-list .address-link:hover,
+.addres-list .address-link:focus,
+.contact-list .contact-link:hover,
+.contact-list .contact-link:focus {
+    color: var(--acsent-color)
+}
+
+/* Навигация по сайту+контактная информация в активе */
+
+.nav-links .nav-link:active,
+.addres-list .address-link:active,
+.contact-list .contact-link:active {
+    color: #4D5AE5;
+}
+
+/* Контакты */
+
+.contact {
+    font-style: normal;
+}
+
+/* Стили героя сайта */
+
+
+
+.hero {
+    
+    background-color: #2E2F42;
+    width: 1440px;
+    height: 600px;
+    text-align: center;
+    
+
+}
+
+.hero .hero-title {
+    color: #ffffff;
+    font-size: 56px;
+    line-height: 1.07;
+    padding-top: 188px;
+    padding-bottom: 48px;
+    letter-spacing: 0.02em;
+
+    
+}
+
+.hero .hero-button {
+    
+
+    color: #ffffff;
+    background-color: var(--button-color);
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    min-width: 169px;
+    padding: 16px 32px;
+    gap: 10px;
+    
+
+    
+    
+    
+}
+
+.hero .hero-button:hover,
+.hero .hero-button:focus {
+
+    background-color: #404bbf;
+}
+
+
+/* Стили для кнопок на странице Портфолио*/
+
+.section-galery .meny-button {
+    background-color: var(--button-portvolio-color);
+    color: var(--button-color);
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+}
+
+/* Ховер кнопок страницы Портфлио */
+
+.section-galery .meny-button:hover,
+.section-galery .meny-button:focus {
+    background-color: var(--acsent-color);
+    color: #ffffff;
+
+}
+
+
+
+
+/* Общие стили для секций и заголовков */
+
+
+
+.section .section-title {
+    color: var(--primary-text-color);
+    font-size: 36px;
+    line-height: 1.11;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+
+
+
+/* Секция галерея,оформление заголовков и параграфа */
+
+.section-galery .galery-title {
+    color: var(--primary-text-color);
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.section-text {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--title-paragrav-color);
+}
+
+/* Стили к галерее на странице портфолио */
+
+
+
+.galery-paragrav {
+    color: var(--title-paragrav-color);
+    line-height: 1.5;
+}
+
+/* Чем мы занимаемся секция */
+
+.about-list {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 120px;
+    margin-bottom: 0;
+}
+
+.about-list li {
+    margin-left: 24px;
+}
+
+.about-list li:first-child {
+    margin-left: 0;
+}
+
+.features {
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--primary-text-color);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding-bottom: 8px;
+}
+
+.outher-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+    
+}
+
+.section .section-caption {
+    
+
+    color: var(--primary-text-color);
+    font-size: 36px;
+    line-height: 1.11;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    text-align: center;
+
+    padding-top: 120px ;
+}
+
+/* CТили для челенов команды */
+.section-team {
+    width: 1440px;
+    background-color: #F4F4FD;
+}
+
+.team-list{
+    display: flex;
+    margin-top: 72px;
+    justify-content: space-between;
+}
+
+.team-title {
+    color: var(--primary-text-color);
+    font-size: 36px;
+    line-height: 1.11;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    
+    padding-top: 120px;
+}
+
+.section-team .section-subject {
+    color: var(--primary-text-color);
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    padding-bottom: 8px;
+}
+
+
+.section-team .team-item {
+    background-color: #FFFFFF;
+}
+
+/* Стили футтера */
+
+.footer {
+    background-color: var(--primary-text-color);
+    color: #ffffff;
+    height: 312px;
+}
+
+/* Логотип футтера */
+
+.footer .logo-footer {
+        display: inline-block;
+        color: var(--button-color);
+        font-size: 18px;
+        line-height: 1.17;
+        font-family: 'Raleway', sans-serif;
+        letter-spacing: 0.03em;
+        font-weight: 800;
+        text-transform: uppercase;
+
+        padding-left: 156px;
+        padding-top: 101.5px;
+
+}
+
+.footer .footer-logo-span {
+
+    color: #f4f4fd;
+ 
+}
+
+.footer .footer-text {
+    padding-top: 15.5px;
+    padding-left: 156px;
+}
+
+
+
